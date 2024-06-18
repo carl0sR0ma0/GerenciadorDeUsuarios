@@ -1,0 +1,6 @@
+@Embalsoft.API_HostAddress = http://localhost:5126
+
+GET {{Embalsoft.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
