@@ -11,7 +11,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Embalsoft.Domain", "Embalso
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Embalsoft.CrossCutting", "Embalsoft.CrossCutting\Embalsoft.CrossCutting.csproj", "{6EAD70C0-1F36-456B-AF5A-B0CB84203B34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Embalsoft.Services", "Embalsoft.Services\Embalsoft.Services.csproj", "{B4BD3F23-0119-47CD-83F8-3C3AAE13AD23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Embalsoft.Services", "Embalsoft.Services\Embalsoft.Services.csproj", "{B4BD3F23-0119-47CD-83F8-3C3AAE13AD23}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Embalsoft.FrontApp", "Embalsoft.FrontApp\", "{582C5EB4-1BAC-44B8-9C08-1FE886EC535A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53215"
+		Debug.AspNetCompiler.PhysicalPath = "Embalsoft.FrontApp\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53215\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53215"
+		Release.AspNetCompiler.PhysicalPath = "Embalsoft.FrontApp\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53215\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53215"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +59,10 @@ Global
 		{B4BD3F23-0119-47CD-83F8-3C3AAE13AD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4BD3F23-0119-47CD-83F8-3C3AAE13AD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4BD3F23-0119-47CD-83F8-3C3AAE13AD23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582C5EB4-1BAC-44B8-9C08-1FE886EC535A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582C5EB4-1BAC-44B8-9C08-1FE886EC535A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582C5EB4-1BAC-44B8-9C08-1FE886EC535A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{582C5EB4-1BAC-44B8-9C08-1FE886EC535A}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
