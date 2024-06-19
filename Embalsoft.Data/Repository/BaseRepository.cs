@@ -77,17 +77,5 @@ namespace Embalsoft.Data.Repository
             var result = await _context.Set<GrupoEntity>().FirstOrDefaultAsync(e => e.Id == id);
             return result!.Administrador;
         }
-
-        public async Task<T?> ObterPorId(int id)
-        {
-            try
-            {
-                return await _dataset.SingleOrDefaultAsync(e => e.Id.Equals(id));
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
     }
 }

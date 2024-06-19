@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Usuários</h2>
+  <div *ngIf="autenticarService.isLoggedIn()">
+    <div class="text-right mb-3" *ngIf="autenticarService.isAdministrator()">
+      <a routerLink="/usuarios/novo" class="btn btn-primary">Adicionar</a>
+    </div>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Grupo</th>
+          <th>Data de Cadastro</th>
+          <th>Data de Modificação</th>
+          <th *ngIf="autenticarService.isAdministrator()">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of usuarios">
+          <td>{{ user.id }}</td>
+          <td>{{ user.nome }}</td>
+          <td>{{ user.cpf }}</td>
+          <td>{{ user.grupo.descricao }}</td>
+          <td>{{ user.dataCadastro | date }}</td>
+          <td>{{ user.dataAlterado | date }}</td>
+          <td *ngIf="autenticarService.isAdministrator()">
+            <a routerLink="/usuarios/editar/{{ user.id }}" class="btn btn-sm btn-info">Editar</a>
+            <button class="btn btn-sm btn-danger" (click)="deletarUsuario(user.id)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="!autenticarService.isLoggedIn()">
+    <div class="alert alert-danger" role="alert">
+      Por favor, faça login para visualizar a lista de usuários.
+    </div>
+  </div>
+</div>

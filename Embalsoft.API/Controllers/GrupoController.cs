@@ -15,6 +15,13 @@ namespace Embalsoft.API.Controllers
         {
             return Ok(await _service.ObterTodos());
         }
+        
+        [HttpGet("{id}")]
+        [Authorize(Roles = "Administrador")]
+        public async Task<IActionResult> ObterGrupoPorId(int id)
+        {
+            return Ok(await _service.ObterPorId(id));
+        }
 
         [HttpPost]
         [Authorize(Roles = "Administrador")]

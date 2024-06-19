@@ -7,7 +7,6 @@ namespace Embalsoft.Domain.Interfaces.Repository
         Task<T?> Adicionar(T entity);
         Task<T?> Alterar(T entity);
         Task<bool> Deletar(int id);
-        Task<T?> ObterPorId(int id);
         Task<bool> GrupoAdministrador(int id);
     }
 }

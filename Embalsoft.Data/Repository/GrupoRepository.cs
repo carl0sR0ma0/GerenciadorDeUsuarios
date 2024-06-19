@@ -18,5 +18,10 @@ namespace Embalsoft.Data.Repository
         {
             return await _dataset.Include(g => g.Usuarios).ToListAsync();
         }
+
+        public async Task<GrupoEntity?> ObterPorId(int id)
+        {
+            return await _context.Grupos.Include(g => g.Usuarios).SingleOrDefaultAsync(e => e.Id.Equals(id));
+        }
     }
 }

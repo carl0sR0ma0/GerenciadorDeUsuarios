@@ -1,0 +1,88 @@
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.group-list {
+  display: grid;
+  gap: 20px;
+}
+
+.group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.group-info {
+  flex: 1;
+}
+
+.group-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.group-info p {
+  margin: 0;
+  color: #666;
+}
+
+.group-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.group-actions .btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+}
+
+.group-actions .btn-info:hover {
+  background-color: #117a8b;
+  border-color: #117a8b;
+}
+
+.group-actions .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: #fff;
+}
+
+.group-actions .btn-danger:hover {
+  background-color: #bd2130;
+  border-color: #bd2130;
+}

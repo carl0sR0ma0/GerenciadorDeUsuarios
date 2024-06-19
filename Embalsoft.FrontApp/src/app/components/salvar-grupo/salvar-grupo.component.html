@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>{{ !estaModoEdicao ? 'Novo Grupo de Usuários' : 'Editar Grupo de Usuários' }}</h2>
+  <form (ngSubmit)="salvarGrupo()" #userForm="ngForm">
+    <div class="form-group">
+      <label for="descricao">Descrição:</label>
+      <input type="text" class="form-control" id="descricao" name="descricao" [(ngModel)]="grupo.descricao" required>
+    </div>
+    <div class="form-check">
+      <label for="senha">Senha:</label>
+      <input type="checkbox" id="administrador" name="administrador" [(ngModel)]="grupo.administrador" class="form-check-input">
+    </div>
+    <button type="submit" class="btn btn-primary">{{ !estaModoEdicao ? 'Salvar' : 'Atualizar' }}</button>
+  </form>
+</div>

@@ -6,5 +6,6 @@ namespace Embalsoft.Domain.Interfaces.Repository
     {
         Task<UsuarioEntity?> BuscarPorLogin(string nome);
         Task<IEnumerable<UsuarioEntity?>?> ObterTodos();
+        Task<UsuarioEntity?> ObterPorId(int id);
     }
 }

@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+import { AutenticarService } from './services/autenticar.service';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'User Management Application';
+
+  constructor(public autenticar: AutenticarService, private router: Router) { }
+
+  logout(): void {
+    this.autenticar.logout();
+  }
+}

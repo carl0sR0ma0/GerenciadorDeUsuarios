@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Lista de Grupos de Usuários</h2>
+  <div class="group-list">
+    <div class="text-right mb-3" *ngIf="autenticarService.isAdministrator()">
+      <a routerLink="/grupos/novo" class="btn btn-primary">Adicionar</a>
+    </div>
+    <div *ngFor="let grupo of grupos" class="group-item">
+      <div class="group-info">
+        <h3>{{ grupo.descricao }}</h3>
+        <p>Administrador: {{ grupo.administrador ? 'Sim' : 'Não' }}</p>
+      </div>
+      <div class="group-actions" *ngIf="autenticarService.isAdministrator()">
+        <a routerLink="/grupos/editar/{{ grupo.id }}" class="btn btn-info">Editar</a>
+        <button class="btn btn-danger" (click)="deletarGrupo(grupo.id)">Remover</button>
+      </div>
+    </div>
+  </div>
+</div>
